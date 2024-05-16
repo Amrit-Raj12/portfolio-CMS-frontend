@@ -12,20 +12,19 @@ Before you begin, ensure you have Docker installed on your machine. You can down
 
    ```bash
    git clone https://github.com/Amrit-Raj12/portfolio-CMS-frontend.git
+   ```
+2. Go to app directory
+   ```bash
    cd portfolio-CMS-frontend
    ```
-
-# 2.Build the Docker image:
-
-    ```bash
+3.Build the Docker image
+   ```bash
     docker build -t your-image-name .
-    ```
-
-# 3.Run the Docker container:
-
-    ```bash
-    docker run -it --name your-container-name -p 3000:3000 your-image-name
-    ```
+   ```
+ 4.Run the Docker container
+   ```bash
+   docker run -it --name your-container-name -p 3000:3000 your-image-name
+   ```
 
 # 4. Access the application:
 
