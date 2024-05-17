@@ -19,7 +19,7 @@ Before you begin, ensure you have Docker installed on your machine. You can down
    ```
 3.Build the Docker image
    ```bash
-    docker build -t your-image-name .
+   docker build -f Dockerfile.dev -t your-container-name .
    ```
  4.Run the Docker container
    ```bash
