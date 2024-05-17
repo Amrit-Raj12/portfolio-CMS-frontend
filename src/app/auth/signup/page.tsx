@@ -1,16 +1,18 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 
-export const metadata: Metadata = {
-  title: "Next.js SignUp Page | TailAdmin - Next.js Dashboard Template",
-  description: "This is Next.js SignUp Page TailAdmin Dashboard Template",
-  // other metadata
-};
+// export const metadata: Metadata = {
+//   title: "Next.js SignUp Page | TailAdmin - Next.js Dashboard Template",
+//   description: "This is Next.js SignUp Page TailAdmin Dashboard Template",
+//   // other metadata
+// };
 
 const SignUp: React.FC = () => {
   return (
@@ -29,13 +31,9 @@ const SignUp: React.FC = () => {
                   width={176}
                   height={32}
                 />
-                <Image
-                  className="dark:hidden"
-                  src={"/images/logo/logo-dark.svg"}
-                  alt="Logo"
-                  width={176}
-                  height={32}
-                />
+                <p className="text-2xl font-bold text-black hover:text-[#A0FD32]">
+                  Portfolify
+                </p>
               </Link>
               <p className="2xl:px-20">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -171,7 +169,7 @@ const SignUp: React.FC = () => {
             <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
               <span className="mb-1.5 block font-medium">Start for free</span>
               <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
-                Sign Up to TailAdmin
+                Sign Up to Portfolify
               </h2>
 
               <form>
@@ -315,7 +313,7 @@ const SignUp: React.FC = () => {
                   <input
                     type="submit"
                     value="Create account"
-                    className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 text-white transition hover:bg-opacity-90"
+                    className="w-full cursor-pointer rounded-lg border border-[#A0FD32] bg-[#A0FD32] p-4 text-white transition hover:bg-opacity-90"
                   />
                 </div>
 

@@ -1,37 +1,44 @@
+import Link from "next/link";
 import React, { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 interface CardDataStatsProps {
   title: string;
-  total: string;
-  rate: string;
-  levelUp?: boolean;
-  levelDown?: boolean;
-  children: ReactNode;
+  linkUrl: string;
+  date: string;
+  // levelUp?: boolean;
+  // levelDown?: boolean;
+  // children: ReactNode;
 }
 
 const CardDataStats: React.FC<CardDataStatsProps> = ({
   title,
-  total,
-  rate,
-  levelUp,
-  levelDown,
-  children,
+  linkUrl,
+  date,
 }) => {
   return (
-    <div className="rounded-sm border border-stroke bg-white px-7.5 py-6 shadow-default dark:border-strokedark dark:bg-boxdark">
-      <div className="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
+    <motion.div
+      className="cursor-pointer rounded-2xl border-[2px] border-t-12 border-[#A0FD32] border-t-[#A0FD32] bg-white px-7.5 py-6 shadow-default dark:border-[#A0FD32] dark:border-t-[#A0FD32]  dark:bg-boxdark"
+      whileHover={{ scale: 1.1, boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)" }}
+      transition={{ duration: 0.3 }}
+    >
+      {/* <div className="flex h-11.5 w-11.5 items-center justify-center rounded-full bg-meta-2 dark:bg-meta-4">
         {children}
-      </div>
+      </div> */}
 
       <div className="mt-4 flex items-end justify-between">
         <div>
-          <h4 className="text-title-md font-bold text-black dark:text-white">
-            {total}
+          <h4 className="text-title-md font-bold text-black dark:text-[#A0FD32]">
+            {title}
           </h4>
-          <span className="text-sm font-medium">{title}</span>
+          <span className="text-sm font-medium">Created At: {date}</span>
         </div>
 
-        <span
+        <Link href={linkUrl} className="hover:text-[#A0FD32]">
+          View Portfolio
+        </Link>
+
+        {/* <span
           className={`flex items-center gap-1 text-sm font-medium ${
             levelUp && "text-meta-3"
           } ${levelDown && "text-meta-5"} `}
@@ -68,9 +75,9 @@ const CardDataStats: React.FC<CardDataStatsProps> = ({
               />
             </svg>
           )}
-        </span>
+        </span> */}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
