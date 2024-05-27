@@ -11,6 +11,7 @@
   "dependencies": {
     "apexcharts": "^3.45.2",
     "flatpickr": "^4.6.13",
+    "flowbite-datepicker": "^1.2.6",
     "framer-motion": "^11.2.4",
     "jsvectormap": "^1.5.3",
     "next": "14.1.0",
