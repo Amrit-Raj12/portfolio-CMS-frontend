@@ -17,6 +17,11 @@ const PortfolioCreate: React.FC = () => {
     setCurrentStep((prevStep) => Math.max(prevStep - 1, 0));
   };
 
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    handleNextClick();
+  };
+
   return (
     <>
       <ol className="mb-4 flex w-full items-center sm:mb-5">
@@ -99,7 +104,7 @@ const PortfolioCreate: React.FC = () => {
           <div>Publish</div>
         </li>
       </ol>
-      <form action="#">
+      <form action="#" onSubmit={handleFormSubmit}>
         {currentStep === 0 && (
           <PersonalDetail handleNextClick={handleNextClick} />
         )}
@@ -110,6 +115,17 @@ const PortfolioCreate: React.FC = () => {
         {currentStep === 3 && <ProjectForm handleNextClick={handleNextClick} />}
         {currentStep === 4 && (
           <AchievementForm handleNextClick={handleNextClick} />
+        )}
+
+        {currentStep === 4 && (
+          <div className="mt-4 flex justify-end">
+            <button
+              className="rounded-lg bg-[#A0FD32] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#A0FD32] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-[#A0FD32] dark:hover:bg-[#A0FD32] dark:focus:ring-[#A0FD32]"
+              type="submit"
+            >
+              Publish
+            </button>
+          </div>
         )}
       </form>
 
@@ -122,7 +138,7 @@ const PortfolioCreate: React.FC = () => {
             Previous Step
           </button>
         )}
-        {currentStep < 5 && (
+        {currentStep < 4 && (
           <button
             className="rounded-lg bg-[#A0FD32] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#A0FD32] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-[#A0FD32] dark:hover:bg-[#A0FD32] dark:focus:ring-[#A0FD32]"
             onClick={handleNextClick}
