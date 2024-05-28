@@ -33,6 +33,7 @@ const PortfolioShowcase: React.FC = () => {
                             </div>
                             <div className="cursor-pointer">
                                 <svg
+                                    className="dark:hover:fill-[#A0FD32]"
                                     fill="#000000"
                                     width="34px"
                                     height="34px"
