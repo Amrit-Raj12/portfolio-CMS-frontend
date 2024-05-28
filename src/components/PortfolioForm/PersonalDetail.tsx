@@ -116,6 +116,27 @@ const PersonalDetail: React.FC<PersonalFormProps> = ({ handleNextClick }) => {
           />
         </div>
 
+        <div className="col-span-2 grid">
+          <label
+            className="text-gray-900 mb-2 block text-sm font-medium dark:text-white"
+            htmlFor="file_input"
+          >
+            Avatar
+          </label>
+          <input
+            className="text-gray-900 border-gray-300 bg-gray-50 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 block w-full cursor-pointer rounded-lg border text-sm focus:outline-none"
+            aria-describedby="file_input_help"
+            id="file_input"
+            type="file"
+          />
+          <p
+            className="text-gray-500 dark:text-gray-300 mt-1 text-sm"
+            id="file_input_help"
+          >
+            SVG, PNG, JPG or GIF (MAX. 800x400px).
+          </p>
+        </div>
+
         <div>
           <DynamicInput />
         </div>
